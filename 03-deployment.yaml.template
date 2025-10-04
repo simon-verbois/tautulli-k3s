@@ -30,7 +30,7 @@ spec:
           mountPath: /config
         livenessProbe:
           httpGet:
-            path: /login  
+            path: /  
             port: http  
           initialDelaySeconds: 30 
           periodSeconds: 20 
@@ -38,13 +38,13 @@ spec:
           failureThreshold: 3 
         readinessProbe:
           httpGet:
-            path: /login
+            path: /
             port: http
           initialDelaySeconds: 15 
           periodSeconds: 10
           timeoutSeconds: 5
           failureThreshold: 3
-          
+
       volumes:
       - name: tautulli-config
         persistentVolumeClaim:
