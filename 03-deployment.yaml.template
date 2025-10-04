@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tautulli-deployment
+  namespace: tautulli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tautulli
+  template:
+    metadata:
+      labels:
+        app: tautulli
+    spec:
+      securityContext:
+        fsGroup: YOUR-USER-GID
+      containers:
+      - name: app
+        image: lscr.io/linuxserver/tautulli:latest
+        envFrom:
+        - configMapRef:
+            name: tautulli-configmap
+        ports:
+        - containerPort: 8181
+          name: http
+        volumeMounts:
+        - name: tautulli-config
+          mountPath: /config
+
+      volumes:
+      - name: tautulli-config
+        persistentVolumeClaim:
+          claimName: tautulli-config-pvc
