@@ -116,6 +116,14 @@ You can monitor the progress of the update with:
 kubectl rollout status deployment/tautulli-deployment -n tautulli
 ```
 
+## Uninstallation
+
+To remove all the resources created by these manifests, run the following command:
+
+```bash
+kubectl delete -f .
+```
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
