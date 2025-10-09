@@ -15,7 +15,7 @@ spec:
         app: tautulli
     spec:
       securityContext:
-        fsGroup: YOUR-USER-GID
+        fsGroup: YOUR-USER-GID  # <-- Add your own user GID
       containers:
       - name: app
         image: lscr.io/linuxserver/tautulli:latest

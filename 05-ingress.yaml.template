@@ -5,10 +5,10 @@ metadata:
   name: tautulli-ingress
   namespace: tautulli
   annotations:
-    traefik.ingress.kubernetes.io/router.tls.certresolver: your-certresolver-name
+    traefik.ingress.kubernetes.io/router.tls.certresolver: your-certresolver-name # <-- Add your TLS resolver name
 spec:
   rules:
-  - host: "tautulli.your-domain.com"
+  - host: "tautulli.your-domain.com" # <-- Add you own domain
     http:
       paths:
       - path: /
@@ -20,4 +20,4 @@ spec:
               name: http
   tls:
   - hosts:
-    - "tautulli.your-domain.com"
+    - "tautulli.your-domain.com" # <-- Add you own domain

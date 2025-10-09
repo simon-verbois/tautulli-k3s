@@ -4,6 +4,6 @@ metadata:
   name: tautulli-configmap
   namespace: tautulli
 data:
-  TZ: "Europe/Paris"
-  PUID: "YOUR-USER-UID"
-  PGID: "YOUR-USER-GID"
+  TZ: "Europe/Paris" # <-- Add your own TZ
+  PUID: "YOUR-USER-UID"  # <-- Add your own user UID
+  PGID: "YOUR-USER-GID"  # <-- Add your own user GID
