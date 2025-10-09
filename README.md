@@ -1,4 +1,4 @@
-# Deploying Tautulli on K3s/Kubernetes
+# Deploying Tautulli on Kubernetes
 
 This repository contains a set of Kubernetes manifests for deploying [Tautulli](https://tautulli.com/), a popular monitoring and tracking tool for [Plex Media Server](https://www.plex.tv/).
 
